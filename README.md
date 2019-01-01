@@ -200,7 +200,7 @@ This package uses the [sms](https://pub.dartlang.org/packages/sms) package to be
 This is my first Flutter package, it currently seems bugless but feel free to contribute by sending a pull request.
 
 ## Author
-I am Fatih, a self taught developer. Feel free to contact me if you have any questions/suggestions.
+Feel free to contact me if you have any questions/suggestions.
 
 **Fatih Çakmak**
 cakmakfatih@outlook.com.tr
