@@ -197,7 +197,7 @@ You can find a fully working example in `examples/example.dart` in the github re
 This package uses the [sms](https://pub.dartlang.org/packages/sms) package to be able to listen to the received messages for pin entries. **Since the [sms](https://pub.dartlang.org/packages/sms) package only works on the Android now, PinView's sms option only works on Android too.**
 
 ## Contribute
-This is my first Flutter package, it currently seems bugless but feel free contribute by sending a fork request.
+This is my first Flutter package, it currently seems bugless but feel free to contribute by sending a fork request.
 
 ## Author
 I am Fatih, a self taught developer. Feel free to contact me if you have any questions/suggestions.
