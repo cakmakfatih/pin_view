@@ -3,7 +3,7 @@
 ![](https://i.ibb.co/bFxHzXP/Screenshot-1546255213.png)
 PinView is a fully configurable package to create pin fields that can also easily be integrated with an SMS verification system.
 
-## Installation
+# Installation
 To install PinView, simply add the following to your dependencies in `pubspec.yaml`.
 ```
     dependencies:
