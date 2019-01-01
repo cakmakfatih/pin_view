@@ -140,8 +140,9 @@ class PinViewWithSmsExample extends StatelessWidget {
 	final SmsListener smsListener = SmsListener (
 		from: '6505551212', // address that the message will come from
 		formatBody: (String body) {
-			// in this example, the incoming message is
-			// "Your verification code is: 341-430"
+			// incoming message type
+			// from: "6505551212"
+			// body: "Your verification code is: 123-456"
 			// with this function, we format body to only contain
 			// the pin itself
 				
