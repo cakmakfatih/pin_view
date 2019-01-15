@@ -1,6 +1,6 @@
 name: pin_view
 description: Easily configurable PinView that also supports Sms listening.
-version: 0.0.1
+version: 1.0.0
 author: Fatih Çakmak <cakmakfatih@outlook.com.tr>
 homepage: https://github.com/cakmakfatih/pin_view
 

@@ -43,11 +43,11 @@ class Example extends StatelessWidget {
 							),
 							Container(margin:  EdgeInsets.symmetric(vertical:  5.0)),
 							PinView (
-								count: 6, // describes the fields
+								count: 6, // describes the field number
 								dashPositions: [2,4], // positions of dashes, you can add multiple
-								autoFocusFirstField: false, // defaults to true,
+								autoFocusFirstField: false, // defaults to true
 								margin: EdgeInsets.all(2.5), // margin between the fields
-								obscureText: true, // describes whether the text fields should be obscure or not, defaults to false,
+								obscureText: true, // describes whether the text fields should be obscure or not, defaults to false
 								style: TextStyle (
 									// style for the fields
 									fontSize: 19.0,
@@ -59,7 +59,7 @@ class Example extends StatelessWidget {
 									color: Colors.grey
 								),
 								submit: (String pin) {
-									// whenever all the fields are filled
+									// when all the fields are filled
 									// submit function runs with the pin
 									print(pin);
 								}		
@@ -100,7 +100,7 @@ SmsListener smsListener = SmsListener (
 		
 		String codeRaw = body.split(": ")[1];
 		List<String> code = codeRaw.split("-");
-		return code.join(); // 341430
+		return code.join(); // 123456
 	}
 );
 ```
@@ -112,7 +112,7 @@ Widget pinViewWithSms(BuildContext context) {
 		dashPositions: [3],
 		autoFocusFirstField: false,
 		enabled: false, // this makes fields not focusable
-		sms: smsListener // listener we created,
+		sms: smsListener // listener we created
 		submit: (String pin){
 			// when the message comes, this function
 			// will trigger

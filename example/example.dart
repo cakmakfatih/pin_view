@@ -38,7 +38,7 @@ class Example extends StatelessWidget {
                       autoFocusFirstField: false,
                       dashPositions: [3], // describes the dash positions (not indexes)
                       sms: SmsListener (
-                        // this class is used to receive, format and process and an sms
+                        // this class is used to receive, format and process an sms
                         from: "6505551212",
                         formatBody: (String body){
                           // incoming message type
