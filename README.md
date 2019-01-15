@@ -79,13 +79,13 @@ class Example extends StatelessWidget {
 
 ![](https://i.ibb.co/0fss75F/Screenshot-1546362211.png)
 
-To use PinView with SMS detection, you first need to allow necessary `READ_SMS` and `RECEIVE_SMS` permissions for Android To accomplish this, add the following lines to your `AndroidManifest.xml` file.
+To use PinView with SMS detection, you first need to allow necessary `READ_SMS` and `RECEIVE_SMS` permissions for Android. To accomplish this, add the following lines to your `AndroidManifest.xml` file.
 
 ```
 <uses-permission android:name="android.permission.READ_SMS"/>
 <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 ``` 
-After you add the following, you can try the example below.
+After you provide the necessary permissions, you can try the example below.
 
 1. Create an SmsListener (which comes with the pin_view).
 ```
@@ -104,7 +104,7 @@ SmsListener smsListener = SmsListener (
 	}
 );
 ```
-2. Add your listener to the pinView's sms parameter.
+2. Add your listener to the PinView's sms parameter.
 ```
 Widget pinViewWithSms(BuildContext context) {
 	return PinView (
