@@ -137,6 +137,13 @@ class _PinViewState extends State<PinView> {
                     _pin[index + 1] = val.substring(1);
                     FocusScope.of(context).requestFocus(_focusNodes[index + 1]);
                   }
+                } else if (val.length >= widget.count) {
+                  for (var i = 0; i < widget.count; i++) {
+                    _controllers[i].text = val.substring(i, i + 1);
+                    _pin[i] = val.substring(i, i + 1);
+                  }
+                  FocusScope.of(context)
+                      .requestFocus(_focusNodes[widget.count - 1]);
                 } else {
                   _pin[index] = "";
                   if (index != 0) {
