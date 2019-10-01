@@ -37,20 +37,6 @@ class Example extends StatelessWidget {
                       count: 6, // count of the fields, excluding dashes
                       autoFocusFirstField: false,
                       dashPositions: [3], // describes the dash positions (not indexes)
-                      sms: SmsListener (
-                        // this class is used to receive, format and process an sms
-                        from: "6505551212",
-                        formatBody: (String body){
-                          // incoming message type
-                          // from: "6505551212"
-                          // body: "Your verification code is: 123-456"
-                          // with this function, we format body to only contain
-                          // the pin itself
-                          String codeRaw = body.split(": ")[1];
-                          List<String> code = codeRaw.split("-");
-                          return code.join();
-                        }
-                      ),
                       submit: (String pin){
                         showDialog (
                           context: context,
