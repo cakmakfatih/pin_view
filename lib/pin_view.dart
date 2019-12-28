@@ -66,17 +66,15 @@ class _PinViewState extends State<PinView> {
   void _listenSms() async {
     _smsReceiver = SmsReceiver();
     _smsReceiver.onSmsReceived.listen((SmsMessage message) {
-      if (message.sender == widget.sms.from) {
-        String code = widget.sms.formatBody != null
-            ? widget.sms.formatBody(message.body)
-            : message.body;
-        for (TextEditingController controller in _controllers) {
-          controller.text = code[_controllers.indexOf(controller)];
-          _pin[_controllers.indexOf(controller)] = controller.text;
-        }
-
-        widget.submit(_pin.join());
+      String code = widget.sms.formatBody != null
+          ? widget.sms.formatBody(message.body)
+          : message.body;
+      for (TextEditingController controller in _controllers) {
+        controller.text = code[_controllers.indexOf(controller)];
+        _pin[_controllers.indexOf(controller)] = controller.text;
       }
+
+      widget.submit(_pin.join());
     });
   }
 
