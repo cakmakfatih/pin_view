@@ -1,6 +1,7 @@
 library pin_view;
 
 import 'package:flutter/material.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 class SmsListener {
   final String from;
@@ -62,6 +63,10 @@ class _PinViewState extends State<PinView> {
   }
 
   void _listenSms() async {
+    SmsAutoFill().listenForCode;
+    SmsAutoFill().code.listen((code) {
+      print(code);
+    });
     // _smsReceiver = SmsReceiver();
     // _smsReceiver.onSmsReceived.listen((SmsMessage message) {
     //   String code = widget.sms.formatBody != null
@@ -78,6 +83,12 @@ class _PinViewState extends State<PinView> {
 
   Widget _dash() {
     return Flexible(flex: 1, child: Text("-", style: widget.dashStyle));
+  }
+
+  @override
+  void dispose() {
+    SmsAutoFill().unregisterListener();
+    super.dispose();
   }
 
   @override
