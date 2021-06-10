@@ -6,7 +6,6 @@ class Example extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold (
-      resizeToAvoidBottomPadding: false,
       body: Container (
         padding: EdgeInsets.all(10.0),
         child: Column (

@@ -15,8 +15,8 @@ class PinView extends StatefulWidget {
   final EdgeInsetsGeometry margin;
 
   PinView(
-      {@required this.submit,
-      @required this.count,
+      {required this.submit,
+      required this.count,
       this.obscureText: false,
       this.autoFocusFirstField: true,
       this.enabled: true,
@@ -35,9 +35,9 @@ class PinView extends StatefulWidget {
 }
 
 class _PinViewState extends State<PinView> {
-  List<TextEditingController> _controllers;
-  List<FocusNode> _focusNodes;
-  List<String> _pin;
+  late List<TextEditingController> _controllers;
+  late List<FocusNode> _focusNodes;
+  late List<String> _pin;
 
   @override
   void initState() {
